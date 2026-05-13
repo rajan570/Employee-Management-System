@@ -1,7 +1,10 @@
 import axios from "axios";
 
+const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const LIVE_BACKEND_URL = "https://employee-management-system-ten-eta.vercel.app";
+
 const api = axios.create({
-    baseURL: (import.meta.env.VITE_BASE_URL || "http://localhost:4000") + "/api"
+    baseURL: (isLocalhost ? "http://localhost:4000" : LIVE_BACKEND_URL) + "/api"
 })
 
 // Attach Auth token to all network requests
