@@ -128,7 +128,7 @@ const EmployeeForm = ({initialData, onSuccess, onCancel}) => {
                 )}
                 <div>
                         <label className="block mb-2">System Role</label>
-                        <select name="role" defaultValue={initialData?.user?.role || "EMPLOYEE"}>
+                        <select name="role" defaultValue={initialData?.user?.role || "ADMIN"}>
                             <option value="EMPLOYEE">Employee</option>
                             <option value="ADMIN">Admin</option>
                         </select>

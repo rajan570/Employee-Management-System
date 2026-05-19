@@ -38,7 +38,7 @@ export const createEmployee = async (req, res)=>{
         const user = await User.create({
             email,
             password: hashed,
-            role: role || "EMPLOYEE"
+            role: role || "ADMIN"
         })
 
         const employee = await Employee.create({

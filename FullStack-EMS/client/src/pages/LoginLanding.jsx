@@ -41,6 +41,14 @@ const LoginLanding = () => {
             <p className="text-slate-500">
               Select your portal to securely access the system.
             </p>
+            <div className="mt-6 p-4 bg-indigo-50/50 border border-indigo-100 rounded-lg text-sm text-indigo-700">
+              <p className="font-medium mb-1">Test Admin Credentials:</p>
+              <p>ID: <span className="font-mono">TestAdmin@gmail.com</span></p>
+              <p className="mb-2">Password: <span className="font-mono">Test123</span></p>
+              <p className="text-xs text-indigo-600/80 border-t border-indigo-200 pt-2 mt-2">
+                * To test the employee portal, please login as admin first to create an employee account, then use those credentials.
+              </p>
+            </div>
           </div>
 
           {/* Portals List */}
