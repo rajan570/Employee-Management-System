@@ -9,7 +9,8 @@ const chatbotRouter = express.Router();
 const chatRateLimiter = rateLimit({
     windowMs: 60 * 1000, // 1 minute
     max: 20,
-    keyGenerator: (req) => req.session?.userId || req.ip, // Per user, not IP (after JWT auth)
+    keyGenerator: (req) => req.user?._id?.toString() || req.ip,
+    validate: { keyGeneratorIpFallback: false, xForwardedForHeader: false },
     standardHeaders: true,
     legacyHeaders: false,
     message: { error: "Too many requests. Please wait a moment before sending another message." },
