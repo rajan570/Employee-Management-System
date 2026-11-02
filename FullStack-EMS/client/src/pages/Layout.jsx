@@ -2,6 +2,7 @@ import { Navigate, Outlet } from "react-router-dom"
 import Sidebar from "../components/Sidebar"
 import { useAuth } from "../context/AuthContext"
 import Loading from "../components/Loading"
+import Chatbot from "../components/Chatbot"
 
 
 const Layout = () => {
@@ -18,6 +19,7 @@ const Layout = () => {
                 <Outlet />
             </div>
         </main>
+        <Chatbot />
     </div>
   )
 }
